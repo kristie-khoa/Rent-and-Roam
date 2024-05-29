@@ -1,0 +1,49 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid col-md-8">
+    <a class="navbar-brand brand-name fs-4" href="/">Rent & Roam</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link <%= pathname === '/' ? 'active' : '' %>" href="/"
+          >Home</a
+        >
+        <a
+          class="nav-link <%= pathname === '/listings' ? 'active' : '' %>"
+          href="/listings"
+          >View Rentals</a
+        >
+        <a
+          class="nav-link <%= pathname === '/listings/new' ? 'active' : '' %>"
+          href="/listings/new"
+          >List Your Property</a
+        >
+      </div>
+      <div class="navbar-nav ms-auto">
+        <% if (!currentUser) { %>
+        <a
+          class="nav-link <%= pathname === '/register' ? 'active' : '' %>"
+          href="/register"
+          >Register</a
+        >
+        <a
+          class="nav-link <%= pathname === '/login' ? 'active' : '' %>"
+          href="/login"
+          >Login</a
+        >
+        <% } else {%>
+        <a class="nav-link" href="/logout">Log Out</a>
+        <% }%>
+      </div>
+    </div>
+  </div>
+</nav>

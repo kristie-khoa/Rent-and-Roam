@@ -1,0 +1,102 @@
+<% layout('layouts/boilerplate')%>
+<div class="row py-4">
+  <h1 class="text-center">New Listing</h1>
+  <div class="col-lg-6 mx-auto">
+    <form
+      action="/listings"
+      method="POST"
+      novalidate
+      class="validated-form"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label class="form-label" for="title">Title</label>
+        <input
+          class="form-control"
+          type="text"
+          id="title"
+          name="listing[title]"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Location</label>
+        <input
+          class="form-control"
+          type="text"
+          id="location"
+          name="listing[location]"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="price">Listing Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            placeholder="0.00"
+            aria-label="price"
+            aria-describedby="price-label"
+            name="listing[price]"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="bedrooms">Bedrooms</label>
+        <div class="input-group">
+          <input
+            type="number"
+            class="form-control"
+            id="bedrooms"
+            aria-label="bedrooms"
+            aria-describedby="bedrooms-label"
+            name="listing[bedrooms]"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="bathrooms">Bathrooms</label>
+        <div class="input-group">
+          <input
+            type="number"
+            class="form-control"
+            id="bathrooms"
+            aria-label="bathrooms"
+            aria-describedby="bathrooms-label"
+            name="listing[bathrooms]"
+            required
+          />
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Description</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="description"
+          name="listing[description]"
+          required
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Upload image(s)</label>
+        <input
+          class="form-control"
+          type="file"
+          name="image"
+          id="image"
+          multiple
+        />
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success">Add Listing</button>
+      </div>
+    </form>
+    <a href="/listings">All Listings</a>
+  </div>
+</div>

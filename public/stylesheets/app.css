@@ -1,0 +1,22 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.filter-button:hover .arrow {
+  filter: invert(100%) sepia(1%) saturate(2%) hue-rotate(173deg)
+    brightness(107%) contrast(100%);
+}
+
+.arrow {
+  filter: invert(47%) sepia(9%) saturate(411%) hue-rotate(167deg)
+    brightness(94%) contrast(89%);
+}
+
+.card-img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-family: "Playfair Display", serif;
+}
