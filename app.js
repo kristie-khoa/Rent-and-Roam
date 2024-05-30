@@ -34,8 +34,8 @@ const MongoStore = require("connect-mongo");
 const app = express();
 
 // MongoDB connection URI
-const mongoURI = "mongodb://127.0.0.1:27017/kristie-test";
-// const mongoURI = dbUrl;
+// const mongoURI = "mongodb://127.0.0.1:27017/kristie-test";
+const mongoURI = dbUrl;
 
 async function connectToMongoDB() {
   try {
