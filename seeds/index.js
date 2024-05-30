@@ -4,8 +4,11 @@ const seedListings = require("./seedData");
 const { uploadImages, getImageFilePaths } = require("./uploadSeedImages.js");
 const folderPath = "./seeds/seedImages";
 const getDate = require("../utils/getDate.js");
+const dbUrl = process.env.DB_URL;
 
-mongoose.connect("mongodb://localhost:27017/kristie-test");
+const mongoURI = dbUrl;
+
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 
