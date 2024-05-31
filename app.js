@@ -3,6 +3,7 @@ if (process.env.Node_ENV !== "production") {
 }
 
 const express = require("express");
+const port = process.env.PORT || 3000;
 const mongoose = require("mongoose");
 const path = require("path");
 const ejsMate = require("ejs-mate");
@@ -376,6 +377,6 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-app.listen(3000, () => {
-  console.log("Serving on port 3000");
+app.listen(port, () => {
+  console.log(`Serving on port ${port}`);
 });
